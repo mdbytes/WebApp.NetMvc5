@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
-    "",
+    "\\Database",
     "\\WebAppMVC5Template",
     "\\WebAppMVC5Template\\Views",
     "\\WebAppMVC5Template\\Views\\Car"
   ],
-  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }

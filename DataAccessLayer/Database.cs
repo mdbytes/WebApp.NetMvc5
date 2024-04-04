@@ -6,7 +6,7 @@ namespace MVCWebApp.Data
     public class Database
     {
         //public static string _connectionString = "Data Source=localhost;Initial Catalog=masterhomelessdb;Integrated Security=True";
-        public static string _connectionString = "Data Source=localhost;Initial Catalog=car_db;Integrated Security=True;TrustServerCertificate=True";
+        public static string _connectionString = "Data Source=localhost;Initial Catalog=app_db;Integrated Security=True;TrustServerCertificate=True";
 
         public static SqlConnection GetConnection()
         {

@@ -44,12 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarAccessor.cs" />
+    <Compile Include="CustomerAccess.cs" />
     <Compile Include="Database.cs" />
-    <Compile Include="ICarAccessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccessInterface\DataAccessInterface.csproj">
+      <Project>{ec093c53-74d2-417a-af9b-8d85fbc87e12}</Project>
+      <Name>DataAccessInterface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataObjectLayer\DataObjectLayer.csproj">
       <Project>{E2C38B10-DED3-42A4-9EB1-D2204C8D0BA0}</Project>
       <Name>DataObjectLayer</Name>

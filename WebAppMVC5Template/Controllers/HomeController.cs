@@ -12,7 +12,7 @@ namespace WebAppMVC5Template.Controllers
     {
         public ActionResult Index()
         {
-            Car car = new Car();
+            
             return View();
         }
 

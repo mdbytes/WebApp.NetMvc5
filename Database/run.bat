@@ -2,10 +2,9 @@ color 0a
 @ECHO OFF
 ECHO Creating Database
 
-sqlcmd -S localhost -E -i database.sql
-sqlcmd -S localhost -E -i database_identity.sql
-sqlcmd -S localhost -E -i database_procedures.sql
-sqlcmd -S localhost -E -i database_inserts.sql
+sqlcmd -S localhost -E -i app_db.sql
+sqlcmd -S localhost -E -i app_db_data.sql
+
 
 rem server is localhost
 

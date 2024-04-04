@@ -169,12 +169,17 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CarController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202404041650182_setup application user.cs" />
+    <Compile Include="Migrations\202404041650182_setup application user.designer.cs">
+      <DependentUpon>202404041650182_setup application user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -257,8 +262,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Car\Index.cshtml" />
-    <Content Include="Views\Car\Create.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\Details.cshtml" />
+    <Content Include="Views\Customer\Edit.cshtml" />
+    <Content Include="Views\Customer\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -291,19 +298,26 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\202404041650182_setup application user.resx">
+      <DependentUpon>202404041650182_setup application user.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
-      <Project>{B890F6E3-50AC-4D2A-AB02-973B528F187A}</Project>
-      <Name>DataAccessLayer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DataObjectLayer\DataObjectLayer.csproj">
       <Project>{E2C38B10-DED3-42A4-9EB1-D2204C8D0BA0}</Project>
       <Name>DataObjectLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicLayerInterface\LogicLayerInterface.csproj">
+      <Project>{3fbcc742-3865-418f-896c-44df31e6b782}</Project>
+      <Name>LogicLayerInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicLayer\LogicLayer.csproj">
+      <Project>{42fb9805-cc44-4bd5-adec-34ab013032a0}</Project>
+      <Name>LogicLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
